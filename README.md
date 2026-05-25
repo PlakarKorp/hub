@@ -1,22 +1,32 @@
-# marketplace
+# hub
 
 Plugin build recipes for the kloset plugin ecosystem, used by `krossbuild` to cross-compile `.ptar` artifacts for each integration.
 
-Layout:
+## Layout
 
 ```
 {tier}/{kloset-compat-version}/{plugin}/recipe.yaml
 ```
 
-- `community/` — recipes pointing at [PlakarKorpAgentic/integrations](https://github.com/PlakarKorpAgentic/integrations) (public plugins).
-- `enterprise/` — recipes for the full plugin set; public plugins point at the same public repo, internal-only plugins point at [PlakarKorpAgentic/integrations-private](https://github.com/PlakarKorpAgentic/integrations-private).
+- `community/` — recipes for the open-source plugin set.
+- `enterprise/` — recipes for the full plugin set, including internal-only plugins.
 
 Each `recipe.yaml`:
 
 ```yaml
 name: ftp
 version: v1.1.1
-repository: https://github.com/PlakarKorpAgentic/integrations
+repository: https://github.com/PlakarKorp/integrations
 ```
 
-The aggregated `integrations` / `integrations-private` repos use prefixed tags of the form `<name>/<version>` (e.g. `ftp/v1.1.1`). The builder is expected to check out `<name>/<version>` rather than `<version>` when cloning these repos.
+## Where recipes point
+
+The `repository` field depends on the plakar compatibility version of the recipe:
+
+- **`{tier}/v1.1.0/`** — recipes point at the aggregated mono-repos:
+  - Public plugins → [PlakarKorp/integrations](https://github.com/PlakarKorp/integrations)
+  - Internal-only plugins (enterprise tier) → [PlakarKorp/integrations-private](https://github.com/PlakarKorp/integrations-private)
+
+  Both mono-repos use prefixed tags of the form `<name>/<version>` (e.g. `ftp/v1.1.1`). The builder is expected to resolve `<name>/<version>` rather than `<version>` when cloning these repos.
+
+- **`{tier}/v1.0.0/`** — recipes point at the legacy per-plugin repositories under [PlakarKorpAttic](https://github.com/PlakarKorpAttic) (e.g. `PlakarKorpAttic/integration-ftp`), which retain flat `<version>` tags. This preserves compatibility with plakar v1.0.x, whose `pkg` does not understand prefixed tags.
