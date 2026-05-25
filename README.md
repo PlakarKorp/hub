@@ -29,4 +29,4 @@ The `repository` field depends on the plakar compatibility version of the recipe
 
   Both mono-repos use prefixed tags of the form `<name>/<version>` (e.g. `ftp/v1.1.1`). The builder is expected to resolve `<name>/<version>` rather than `<version>` when cloning these repos.
 
-- **`{tier}/v1.0.0/`** — recipes point at the legacy per-plugin repositories under [PlakarKorpAttic](https://github.com/PlakarKorpAttic) (e.g. `PlakarKorpAttic/integration-ftp`), which retain flat `<version>` tags. This preserves compatibility with plakar v1.0.x, whose `pkg` does not understand prefixed tags.
+- **`{tier}/v1.0.0/`** — recipes point at the legacy per-plugin repositories under [PlakarKorp](https://github.com/PlakarKorp) (e.g. `PlakarKorp/integration-ftp`), which retain flat `<version>` tags. This preserves compatibility with plakar v1.0.x, whose `pkg` does not understand prefixed tags.
