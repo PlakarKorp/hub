@@ -1,5 +1,7 @@
 # hub
 
+This repository hosts plugin build recipes for the Plakar ecosystem and manages the community bounty program for new integrations.
+
 Plugin build recipes for the kloset plugin ecosystem, used by `krossbuild` to cross-compile `.ptar` artifacts for each integration.
 
 ## Layout
