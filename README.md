@@ -37,6 +37,19 @@ The `repository` field depends on the plakar compatibility version of the recipe
 
 Plakar operates a dedicated Feature and Bug Bounty Program to safely collaborate with independent security researchers and open-source developers. This program governs the submission of critical software vulnerabilities and specific roadmap development contributions. The complete program policy, including terms of participation, validation workflows, financial reward grids, and legal safe harbor provisions, can be accessed directly at https://plakar.io/legal-notice/bounty-policy/.
 
+### Security vulnerability rewards
+
+Security researchers who discover vulnerabilities in Plakar are encouraged to report them responsibly. Rewards are evaluated using CVSS v3/v4 scoring.
+
+| Severity | CVSS Score | Reward |
+|----------|------------|--------|
+| Critical | 9.0 – 10.0 | €1,000 to €2,500+ |
+| High | 7.0 – 8.9 | €500 to €1,000 |
+| Medium | 4.0 – 6.9 | Recognition & public thanks |
+| Low | 0.1 – 3.9 | Recognition & public thanks |
+
+To report a vulnerability, send a detailed description and reproduction steps to **security@plakar.io** and **bounty@plakar.io**. The engineering team will triage within five business days. **Do not disclose publicly without prior written authorization from Plakar SAS** — doing so results in immediate disqualification.
+
 ### Integration bounties
 
 Plakar offers paid bounties for high-quality integrations that expand the ecosystem. Each open bounty issue describes exactly what needs to be built, the acceptance criteria, and the payout.
@@ -62,12 +75,25 @@ If your organization relies on one of the listed technologies and wants to own t
 3. Once scope is confirmed, comment to claim the issue. We allow one active claim at a time with a 2-week completion window.
 4. Submit a PR to [PlakarKorp/integrations](https://github.com/PlakarKorp/integrations) referencing the issue.
 5. First merged PR that meets the acceptance criteria wins the bounty.
+6. **After your PR is merged, email bounty@plakar.io to claim your reward.** Payment is not automatic.
+
+#### Getting paid
+
+- **Businesses and registered freelancers** — issue a commercial invoice to Plakar SAS (149 avenue du Maine, 75014 Paris, France, RCS Paris 933 509 754). EU entities use the VAT reverse charge mechanism; non-EU entities invoice without VAT.
+- **Individual contributors** — complete and sign the honor certificate template available in the [full policy](https://plakar.io/legal-notice/bounty-policy/) and send it to accounting@plakar.io with a copy to bounty@plakar.io. Note: bounty rewards are taxable income and must be declared to your local tax authorities.
+- Payment is processed by bank wire transfer within 30 days of invoice or certificate validation. Plakar SAS covers all transfer fees.
 
 #### Rules
 
 - **Only the Plakar core team creates bounty issues.** Do not open issues to propose integrations — use [Discussions](https://github.com/PlakarKorp/hub/discussions) instead (see below).
 - Bounties are paid upon merge, after a brief review period.
 - The core team reserves the right to reject submissions that do not meet the stated requirements.
+
+### Eligibility and exclusions
+
+- **Ineligible participants:** Plakar SAS employees, active freelancers, contractors, and consultants under agreement with Plakar SAS are strictly excluded.
+- **Sanctions:** Individuals or entities in countries subject to EU or French economic sanctions, or listed on EU/French asset-freeze registries, are ineligible.
+- **Licensing:** All contributions must be submitted under the same open-source license as the target Plakar repository.
 
 ### Propose a new integration
 
