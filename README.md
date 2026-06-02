@@ -33,11 +33,15 @@ The `repository` field depends on the plakar compatibility version of the recipe
 
 ---
 
-## Bounty Program
+## Feature and Bug Bounty Program
+
+Plakar operates a dedicated Feature and Bug Bounty Program to safely collaborate with independent security researchers and open-source developers. This program governs the submission of critical software vulnerabilities and specific roadmap development contributions. The complete program policy, including terms of participation, validation workflows, financial reward grids, and legal safe harbor provisions, can be accessed directly at https://plakar.io/legal-notice/bounty-policy/.
+
+### Integration bounties
 
 Plakar offers paid bounties for high-quality integrations that expand the ecosystem. Each open bounty issue describes exactly what needs to be built, the acceptance criteria, and the payout.
 
-### Tiers
+#### Tiers
 
 | Label | Bounty | Scope |
 |-------|--------|-------|
@@ -45,13 +49,13 @@ Plakar offers paid bounties for high-quality integrations that expand the ecosys
 | `bounty:tier2` | $750 | Standard integrations — well-documented tooling, auth support, filter options |
 | `bounty:tier3` | $500 | Basic integrations — straightforward dump/restore with a single data source |
 
-### Priority contributors
+#### Priority contributors
 
 We give priority consideration to companies and teams that can commit to both building **and maintaining** integrations over time. A great example is [FactorFX](https://factorfx.com), the team behind our Proxmox integration, who have demonstrated exactly the kind of long-term ownership we value.
 
 If your organization relies on one of the listed technologies and wants to own that integration, reach out — we want to work with you.
 
-### How to claim a bounty
+#### How to claim a bounty
 
 1. Browse open bounty issues — all tagged `status:open`.
 2. **Ask questions before you start.** Comment on the issue to clarify scope, edge cases, or implementation approach. The Plakar core team will respond. Do not submit a PR without aligning on scope first.
@@ -59,7 +63,7 @@ If your organization relies on one of the listed technologies and wants to own t
 4. Submit a PR to [PlakarKorp/integrations](https://github.com/PlakarKorp/integrations) referencing the issue.
 5. First merged PR that meets the acceptance criteria wins the bounty.
 
-### Rules
+#### Rules
 
 - **Only the Plakar core team creates bounty issues.** Do not open issues to propose integrations — use [Discussions](https://github.com/PlakarKorp/hub/discussions) instead (see below).
 - Bounties are paid upon merge, after a brief review period.
