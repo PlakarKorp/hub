@@ -35,7 +35,7 @@ The `repository` field depends on the plakar compatibility version of the recipe
 
 ## Feature and Bug Bounty Program
 
-Plakar operates a dedicated Feature and Bug Bounty Program to safely collaborate with independent security researchers and open-source developers. This program governs the submission of critical software vulnerabilities and specific roadmap development contributions. The complete program policy, including terms of participation, validation workflows, financial reward grids, and legal safe harbor provisions, can be accessed directly at https://plakar.io/legal-notice/bounty-policy/.
+Plakar operates a dedicated Feature and Bug Bounty Program to safely collaborate with independent security researchers and open-source developers. This program covers two tracks: **security vulnerability disclosure** (Critical and High severity bugs in Plakar software) and **integration development** (building specific connectors and packages listed on the bounty roadmap). The complete program policy, including terms of participation, validation workflows, financial reward grids, and legal safe harbor provisions, can be accessed directly at https://plakar.io/legal-notice/bounty-policy/.
 
 ### Security vulnerability rewards
 
