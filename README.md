@@ -90,6 +90,7 @@ If your organization relies on one of the listed technologies and wants to own t
 - **Only the Plakar core team creates bounty issues.** Do not open issues to propose integrations — use [Discussions](https://github.com/PlakarKorp/hub/discussions) instead (see below).
 - Bounties are paid upon merge, after a brief review period.
 - The core team reserves the right to reject submissions that do not meet the stated requirements.
+- **AI-generated submissions are not accepted.** Code written by AI without a human who can defend its quality, explain every decision, and meet our code standards will be rejected outright. You must be able to own what you submit.
 
 ### Eligibility and exclusions
 
