@@ -1,0 +1,3 @@
+name: mongodb
+version: mongodb/v1.1.0-beta.3
+repository: https://github.com/PlakarKorp/integrations
