@@ -1,0 +1,3 @@
+name: vault
+version: vault/v1.1.10
+repository: https://github.com/PlakarKorp/integrations-private
