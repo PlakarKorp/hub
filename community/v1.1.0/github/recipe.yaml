@@ -1,0 +1,8 @@
+name: github
+version: v0.2.0
+repository: https://github.com/tienou/integration-github
+checksum: sha1:4d2d4e653ea592ed4b4dd21a596d5072abf6bcbb
+
+source: open
+maintainer: tienou
+contact: https://github.com/tienou/integration-github/issues
