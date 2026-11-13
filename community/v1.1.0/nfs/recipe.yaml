@@ -1,3 +1,4 @@
 name: nfs
 version: nfs/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
+checksum: sha1:cea153060ddd806601839fbb2f6e48b708b0a566

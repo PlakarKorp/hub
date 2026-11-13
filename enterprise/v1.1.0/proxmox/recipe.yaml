@@ -1,3 +1,4 @@
 name: proxmox
 version: v1.1.0-rc.2
 repository: https://github.com/PlakarKorp/integration-proxmox
+checksum: sha1:64f50b894ec2fa25d19e29e630cd01a05c1cdab2

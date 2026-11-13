@@ -1,3 +1,4 @@
 name: smb
 version: smb/v1.1.5
 repository: https://github.com/PlakarKorp/integrations
+checksum: sha1:36a7d74c6102a08c0bff901b0988e86d72509ac2

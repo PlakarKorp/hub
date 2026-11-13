@@ -1,3 +1,4 @@
 name: mssql
 version: mssql/v1.1.2
 repository: https://github.com/PlakarKorp/integrations-private
+checksum: sha1:a9666deba7faea33666455b21381c51895ff281d
