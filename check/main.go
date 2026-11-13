@@ -216,8 +216,9 @@ func (c *tagCache) resolve(repository, tag string) (string, error) {
 }
 
 // tags lists a repository's tags with git ls-remote, peeling annotated ones.
-// The machine's git config is left out so the URL means what it says, and
-// the token, when given, is sent the way actions/checkout sends it.
+// It runs outside any checkout with the machine's git config left out, so
+// the URL means what it says and no stored credential, such as the one
+// actions/checkout writes into .git/config, is sent alongside the token.
 func (c *tagCache) tags(repository string) (map[string]string, error) {
 	if refs, ok := c.repos[repository]; ok {
 		return refs, nil
@@ -233,6 +234,7 @@ func (c *tagCache) tags(repository string) (map[string]string, error) {
 	}
 	args = append(args, "ls-remote", "--tags", repository)
 	cmd := exec.Command("git", args...)
+	cmd.Dir = os.TempDir()
 	cmd.Env = append(os.Environ(),
 		"GIT_CONFIG_GLOBAL=/dev/null",
 		"GIT_CONFIG_SYSTEM=/dev/null",
