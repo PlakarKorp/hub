@@ -2,3 +2,7 @@ name: notion
 version: notion/v1.0.0-beta.4
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:998ba43f3529403e4c42316c656547c9501573d4
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues

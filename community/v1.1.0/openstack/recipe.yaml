@@ -2,3 +2,7 @@ name: openstack
 version: openstack/v1.1.4
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:eb0acbbb98b35edac919ed7b8ede0e2f6b5f9d7a
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues

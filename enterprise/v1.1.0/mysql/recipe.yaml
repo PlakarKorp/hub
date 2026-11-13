@@ -2,3 +2,7 @@ name: mysql
 version: mysql/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:6208a7998011421ad450b55ffd32a357febe0ad6
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues

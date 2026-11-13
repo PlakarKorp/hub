@@ -16,7 +16,8 @@
 
 // Command check verifies every recipe.yaml in the tree: the fields are well
 // formed, the checksum names the commit the tag resolves to upstream right
-// now, and the hash algorithm in its prefix is the one the repository uses.
+// now, the hash algorithm in its prefix is the one the repository uses, and
+// source agrees with the repository's visibility on GitHub.
 //
 //	GITHUB_TOKEN=$(gh auth token) go run ./check
 //
@@ -27,14 +28,20 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/base64"
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/fs"
+	"net/http"
+	"net/mail"
+	"net/url"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strings"
+	"time"
 
 	"go.yaml.in/yaml/v3"
 	"golang.org/x/mod/semver"
@@ -45,8 +52,13 @@ const maxRecipe = 64 << 10
 
 var (
 	nameRe     = regexp.MustCompile(`^[a-z][a-z0-9-]*$`)
+	handleRe   = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9-]{0,38}$`)
 	checksumRe = regexp.MustCompile(`^(sha1|sha256):([0-9a-f]+)$`)
 	hashAlgo   = map[int]string{40: "sha1", 64: "sha256"}
+
+	// What krossbuild can target; a platform is "<os>/<arch>".
+	knownOS   = []string{"darwin", "freebsd", "linux", "netbsd", "openbsd", "windows"}
+	knownArch = []string{"386", "amd64", "arm", "arm64", "riscv64"}
 )
 
 type recipe struct {
@@ -54,6 +66,13 @@ type recipe struct {
 	Version    string `yaml:"version"`
 	Repository string `yaml:"repository"`
 	Checksum   string `yaml:"checksum"`
+	// Platforms lists the <os>/<arch> pairs the plugin is built for; absent
+	// means every target.
+	Platforms []string `yaml:"platforms"`
+	// Source is "open" or "proprietary" and must match the repository.
+	Source     string `yaml:"source"`
+	Maintainer string `yaml:"maintainer"` // a GitHub handle or organization
+	Contact    string `yaml:"contact"`    // where users bring problems: an email address or an https URL
 }
 
 func main() {
@@ -149,6 +168,31 @@ func checkRecipe(path string, tags *tagCache) []error {
 		fail("repository %q is not an https://github.com URL", r.Repository)
 	}
 
+	switch r.Source {
+	case "open", "proprietary":
+	case "":
+		fail("source is required: open or proprietary")
+	default:
+		fail("source %q is neither open nor proprietary", r.Source)
+	}
+	if !handleRe.MatchString(r.Maintainer) {
+		fail("maintainer %q is not a GitHub handle", r.Maintainer)
+	}
+	if r.Contact == "" {
+		fail("contact is required: an email address or an https URL")
+	} else if !isContact(r.Contact) {
+		fail("contact %q is neither an email address nor a URL", r.Contact)
+	}
+	for i, p := range r.Platforms {
+		goos, goarch, ok := strings.Cut(p, "/")
+		if !ok || !slices.Contains(knownOS, goos) || !slices.Contains(knownArch, goarch) {
+			fail("platform %q is not a known <os>/<arch>", p)
+		}
+		if slices.Contains(r.Platforms[:i], p) {
+			fail("platform %s listed twice", p)
+		}
+	}
+
 	m := checksumRe.FindStringSubmatch(r.Checksum)
 	if r.Checksum == "" {
 		fail("no checksum; expected the commit %s resolves to, as sha1:<hex> or sha256:<hex>", r.Version)
@@ -171,7 +215,27 @@ func checkRecipe(path string, tags *tagCache) []error {
 	} else if sha != m[2] {
 		fail("tag %s is %s upstream, checksum says %s", r.Version, sha[:12], m[2][:12])
 	}
+
+	// source must say what the repository's visibility says.
+	private, err := tags.private(r.Repository)
+	if err != nil {
+		fail("%v", err)
+	} else if private && r.Source != "proprietary" {
+		fail("repository is private but source says %s", r.Source)
+	} else if !private && r.Source != "open" {
+		fail("repository is public but source says %s", r.Source)
+	}
 	return errs
+}
+
+// isContact accepts what plakar's manifest accepts: an email address, with
+// or without mailto:, or an https URL.
+func isContact(s string) bool {
+	if _, err := mail.ParseAddress(strings.TrimPrefix(s, "mailto:")); err == nil {
+		return true
+	}
+	u, err := url.Parse(s)
+	return err == nil && u.Scheme == "https" && u.Host != ""
 }
 
 func load(path string) (*recipe, error) {
@@ -189,15 +253,56 @@ func load(path string) (*recipe, error) {
 	return &r, nil
 }
 
-// tagCache asks each repository for its tags once.
+// tagCache asks each repository for its tags, and its visibility, once.
 type tagCache struct {
-	token string
-	repos map[string]map[string]string // repository -> ref -> sha
-	fails map[string]error
+	token   string
+	client  *http.Client
+	repos   map[string]map[string]string // repository -> ref -> sha
+	fails   map[string]error
+	privacy map[string]bool
 }
 
 func newTagCache(token string) *tagCache {
-	return &tagCache{token: token, repos: map[string]map[string]string{}, fails: map[string]error{}}
+	return &tagCache{
+		token:   token,
+		client:  &http.Client{Timeout: 30 * time.Second},
+		repos:   map[string]map[string]string{},
+		fails:   map[string]error{},
+		privacy: map[string]bool{},
+	}
+}
+
+// private asks the GitHub API whether the repository is private; an internal
+// repository counts as private, which is what matters to a user.
+func (c *tagCache) private(repository string) (bool, error) {
+	if p, ok := c.privacy[repository]; ok {
+		return p, nil
+	}
+	ownerRepo := strings.TrimPrefix(strings.TrimSuffix(repository, ".git"), "https://github.com/")
+	req, err := http.NewRequest(http.MethodGet, "https://api.github.com/repos/"+ownerRepo, nil)
+	if err != nil {
+		return false, err
+	}
+	req.Header.Set("User-Agent", "hub-check")
+	if c.token != "" {
+		req.Header.Set("Authorization", "Bearer "+c.token)
+	}
+	resp, err := c.client.Do(req)
+	if err != nil {
+		return false, fmt.Errorf("github: %w", err)
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return false, fmt.Errorf("github: %s: %s", ownerRepo, resp.Status)
+	}
+	var info struct {
+		Private bool `json:"private"`
+	}
+	if err := json.NewDecoder(io.LimitReader(resp.Body, maxRecipe)).Decode(&info); err != nil {
+		return false, fmt.Errorf("github: %s: %w", ownerRepo, err)
+	}
+	c.privacy[repository] = info.Private
+	return info.Private, nil
 }
 
 func (c *tagCache) resolve(repository, tag string) (string, error) {

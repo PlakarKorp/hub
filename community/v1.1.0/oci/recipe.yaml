@@ -2,3 +2,7 @@ name: oci
 version: oci/v1.1.0-beta.6
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:d86d4117d4f85a3e83dbe1acbc527df7e20ab6b0
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues

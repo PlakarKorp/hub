@@ -2,3 +2,7 @@ name: k8s
 version: k8s/v1.1.13
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:ffb3f7c883bbb122e96474dd149cc11eed1219c3
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues

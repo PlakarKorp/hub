@@ -2,3 +2,7 @@ name: gcp
 version: gcp/v1.1.2
 repository: https://github.com/PlakarKorp/integrations-private
 checksum: sha1:7ff866f9d886b9637d94fbfbdeeaf8a8a5fe942b
+
+source: proprietary
+maintainer: PlakarKorp
+contact: mailto:support@plakar.io

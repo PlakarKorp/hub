@@ -2,3 +2,7 @@ name: msad
 version: msad/v1.1.2
 repository: https://github.com/PlakarKorp/integrations-private
 checksum: sha1:965a6904334ce1500febcde8500a56eba50b76b6
+
+source: proprietary
+maintainer: PlakarKorp
+contact: mailto:support@plakar.io
