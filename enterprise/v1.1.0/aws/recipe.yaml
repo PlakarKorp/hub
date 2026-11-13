@@ -2,3 +2,7 @@ name: aws
 version: aws/v1.1.4
 repository: https://github.com/PlakarKorp/integrations-private
 checksum: sha1:b11ce7cd8116a6ecfc2ab7cd4f4b368d307242cc
+
+source: proprietary
+maintainer: PlakarKorp
+contact: mailto:support@plakar.io

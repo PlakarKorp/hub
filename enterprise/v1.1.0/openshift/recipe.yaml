@@ -2,3 +2,7 @@ name: openshift
 version: openshift/v1.1.1
 repository: https://github.com/PlakarKorp/integrations-private
 checksum: sha1:9ea46ef14bb8ef2079e45746c9de108362f3bdfa
+
+source: proprietary
+maintainer: PlakarKorp
+contact: mailto:support@plakar.io

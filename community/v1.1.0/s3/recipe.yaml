@@ -2,3 +2,7 @@ name: s3
 version: s3/v1.1.10
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:c91585957ee9a0155b2bb33a502c5c7fd81af65d
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues

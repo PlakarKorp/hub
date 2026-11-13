@@ -2,3 +2,7 @@ name: oracle
 version: oracle/v1.1.0
 repository: https://github.com/PlakarKorp/integrations-private
 checksum: sha1:b77a6ed44341ccccd2255306101a697c461763d7
+
+source: proprietary
+maintainer: PlakarKorp
+contact: mailto:support@plakar.io

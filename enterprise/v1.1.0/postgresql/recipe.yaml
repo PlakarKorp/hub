@@ -2,3 +2,7 @@ name: postgresql
 version: postgresql/v1.1.3
 repository: https://github.com/PlakarKorp/integrations
 checksum: sha1:8c97ea031c2276732c140c60f7cd79903ac615b6
+
+source: open
+maintainer: PlakarKorp
+contact: https://github.com/PlakarKorp/integrations/issues
