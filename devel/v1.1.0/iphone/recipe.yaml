@@ -1,0 +1,8 @@
+name: iphone
+version: iphone/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:2063099e1354cc968f2443681aad893d2148e2dd
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
