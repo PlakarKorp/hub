@@ -4,5 +4,5 @@ repository: https://github.com/PlakarKorp/integration-proxmox
 checksum: sha1:64f50b894ec2fa25d19e29e630cd01a05c1cdab2
 
 source: open
-maintainer: PlakarKorp
-contact: https://github.com/PlakarKorp/integration-proxmox/issues
+maintainer: gillesdubois
+contact: mailto:gilles.dubois@factorfx.com

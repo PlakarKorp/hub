@@ -1,0 +1,8 @@
+name: kvm
+version: v0.4.0
+repository: https://github.com/LoicHarrang1/plakar-kvm
+checksum: sha1:7cc6ac48f9b4eca152d5cf58d5c55f39e24016ed
+
+source: open
+maintainer: LoicHarrang1
+contact: https://github.com/LoicHarrang1/plakar-kvm/issues

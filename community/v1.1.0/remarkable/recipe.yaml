@@ -1,0 +1,8 @@
+name: remarkable
+version: v1.1.1
+repository: https://github.com/heph2/plakar-integration-remarkable
+checksum: sha1:b05f7cd56d7b3830099599345a57cc1816e43ebc
+
+source: open
+maintainer: heph2
+contact: https://github.com/heph2/plakar-integration-remarkable/issues
