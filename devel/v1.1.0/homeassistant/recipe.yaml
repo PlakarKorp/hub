@@ -1,0 +1,8 @@
+name: homeassistant
+version: homeassistant/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:27c1858a80bf69e798e48e968239d55f9c1c0344
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
