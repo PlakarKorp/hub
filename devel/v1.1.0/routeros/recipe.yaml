@@ -1,3 +1,4 @@
 name: routeros
 version: routeros/v1.1.0-alpha.3
 repository: https://github.com/PlakarKorp/integrations
+checksum: sha1:626580eb8f1efb191cf538f9fdeb9c82a4cf0e26

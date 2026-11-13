@@ -1,3 +1,4 @@
 name: ftp
 version: ftp/v1.1.4
 repository: https://github.com/PlakarKorp/integrations
+checksum: sha1:7a464dbc8b709d456abdd3f18d065816a31d5658

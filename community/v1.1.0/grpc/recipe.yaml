@@ -1,3 +1,4 @@
 name: grpc
 version: grpc/v1.1.0-rc.2
 repository: https://github.com/PlakarKorp/integrations
+checksum: sha1:dbf7fb5f2273a7ffa0086bdf3a0587f3d4fe7f09
