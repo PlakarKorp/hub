@@ -1,0 +1,8 @@
+name: android
+version: android/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:bf323ac6f06b620e4e58f85a2f00ba30a1b8b5e2
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
