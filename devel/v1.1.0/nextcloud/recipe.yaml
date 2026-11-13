@@ -1,0 +1,8 @@
+name: nextcloud
+version: nextcloud/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:0131da43d0096f23de24f275475de49f610c90f5
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
