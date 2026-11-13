@@ -1,0 +1,8 @@
+name: minecraft
+version: minecraft/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:4cfe520b4e5809cbc864b56e423cadf8c980e279
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
