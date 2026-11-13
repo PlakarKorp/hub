@@ -1,0 +1,8 @@
+name: pcloud
+version: v1.1.0
+repository: https://github.com/sosoihd/plakar-pcloud
+checksum: sha1:9d015b2814e8e36f73a2eca46f68d4ee56e94c6e
+
+source: open
+maintainer: sosoihd
+contact: https://github.com/sosoihd/plakar-pcloud/issues

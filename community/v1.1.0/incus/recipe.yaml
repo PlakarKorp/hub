@@ -1,0 +1,8 @@
+name: incus
+version: v1.0.0
+repository: https://github.com/pata27/plakar-integration-incus
+checksum: sha1:a6481f5107ebd9f8a8a971933595c3e3f0f43c30
+
+source: open
+maintainer: pata27
+contact: mailto:antoine.dheygers@cryptoweb.fr

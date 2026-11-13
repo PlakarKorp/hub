@@ -1,8 +1,8 @@
 name: proxmox
-version: v1.1.0-rc.2
-repository: https://github.com/PlakarKorp/integration-proxmox
-checksum: sha1:64f50b894ec2fa25d19e29e630cd01a05c1cdab2
+version: v1.1.0-rc.1
+repository: https://github.com/gillesdubois/plakar-integration-proxmox
+checksum: sha1:ade04c03c934bfa7cab7cbfc74b5bcb71bbdf194
 
 source: open
-maintainer: PlakarKorp
-contact: https://github.com/PlakarKorp/integration-proxmox/issues
+maintainer: gillesdubois
+contact: mailto:gilles.dubois@factorfx.com
