@@ -1,0 +1,26 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: go.mod
+      - run: go run ./check
+        env:
+          # Enterprise recipes point at a private repository the default
+          # token cannot read; HUB_CHECK_TOKEN is a read-only token that can.
+          GITHUB_TOKEN: ${{ secrets.HUB_CHECK_TOKEN || secrets.GITHUB_TOKEN }}
