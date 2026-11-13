@@ -1,0 +1,8 @@
+name: n8n
+version: n8n/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:b53c7cea9d7d4543eaca15e67c1ce66fee2f18a9
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
