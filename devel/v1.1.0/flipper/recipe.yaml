@@ -1,0 +1,8 @@
+name: flipper
+version: flipper/v1.1.0-rc.1
+repository: https://github.com/poolpOrg/plakar-integrations
+checksum: sha1:69cbd724e64b103dc32f5bdc335a69ddf0518ffa
+
+source: open
+maintainer: poolpOrg
+contact: https://github.com/poolpOrg/plakar-integrations/issues
