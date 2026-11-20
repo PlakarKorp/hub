@@ -1,0 +1,8 @@
+name: o365
+version: o365/v1.1.0-alpha.1
+repository: https://github.com/PlakarKorp/integrations-private
+checksum: sha1:5fe75f9f36fc3d4fdd10208eaa57923628d94548
+
+source: proprietary
+maintainer: PlakarKorp
+contact: mailto:support@plakar.io
