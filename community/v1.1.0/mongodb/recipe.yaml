@@ -1,7 +1,7 @@
 name: mongodb
-version: mongodb/v1.1.1
+version: mongodb/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:2282886e220e78e30e458c394dd3290609090125
+checksum: sha1:8a4df40e271427a53fc206809733c5490411195a
 
 source: open
 maintainer: PlakarKorp
