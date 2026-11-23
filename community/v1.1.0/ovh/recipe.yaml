@@ -1,7 +1,7 @@
 name: ovh
-version: ovh/v1.1.0-beta.8
+version: ovh/v1.1.0-beta.9
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:be8038f6af5c5be555423bfd3515df90a13e932c
+checksum: sha1:89a2f6bd4b954033737e7710235ccdf353c37371
 
 source: proprietary
 maintainer: PlakarKorp
