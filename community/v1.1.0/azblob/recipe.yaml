@@ -1,7 +1,7 @@
 name: azblob
-version: azblob/v1.1.1
+version: azblob/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:9f217db7209ae68953663b09056fa5bf6cb17c04
+checksum: sha1:96a11b51c9189ac7b02688203fab27fb754bd827
 
 source: open
 maintainer: PlakarKorp
