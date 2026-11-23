@@ -1,7 +1,7 @@
 name: ldap
-version: ldap/v1.1.0-beta.3
+version: ldap/v1.1.0-beta.4
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:a9c066900313aad87bc0c1c4d7fd7732fb8472b6
+checksum: sha1:e29d0c28e6fc799ce9c48bd1617312002e1a1421
 
 source: proprietary
 maintainer: PlakarKorp
