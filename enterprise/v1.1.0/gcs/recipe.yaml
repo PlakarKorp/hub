@@ -1,7 +1,7 @@
 name: gcs
-version: gcs/v1.1.1
+version: gcs/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:ffee3a9d8086ce5358586f8c748950a899645087
+checksum: sha1:b54a2a3d8a1529b97770b1e24deee55b2cc19740
 
 source: open
 maintainer: PlakarKorp
