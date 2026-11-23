@@ -1,7 +1,7 @@
 name: vss
-version: vss/v1.1.3
+version: vss/v1.1.4
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:344b53d427f566a5aa3d9af841ad5e4e302c63b5
+checksum: sha1:2e71f6b6c11f7a3e17aeaaea098232f15c227bfb
 
 source: proprietary
 maintainer: PlakarKorp
