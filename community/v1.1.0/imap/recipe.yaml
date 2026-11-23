@@ -1,7 +1,7 @@
 name: imap
-version: imap/v1.1.1
+version: imap/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:1852a4e37247fb96d3b5582dd2c2b1253df0585c
+checksum: sha1:6c960b1cd77ff70aad9c6d3379f11deed04ecfaa
 
 source: open
 maintainer: PlakarKorp
