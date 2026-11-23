@@ -1,7 +1,7 @@
 name: sftp
-version: sftp/v1.1.10
+version: sftp/v1.1.11
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:84cf55339b50151cd7228179a520a38265e8b9b0
+checksum: sha1:31f770e8fffd6146d82a4743f73e2218c3eb0e91
 
 source: open
 maintainer: PlakarKorp
