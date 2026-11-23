@@ -1,7 +1,7 @@
 name: pcp
-version: pcp/v1.1.0-beta.2
+version: pcp/v1.1.0-beta.3
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:fd29550174548cce49478620650f95d11e43b4bf
+checksum: sha1:82b7dbd533275824f01b37e6812f19d5037ec716
 
 source: proprietary
 maintainer: PlakarKorp
