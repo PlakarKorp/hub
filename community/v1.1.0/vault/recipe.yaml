@@ -1,7 +1,7 @@
 name: vault
-version: vault/v1.1.12
+version: vault/v1.1.13
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:7ab44be5e9f41b4172f8f0d7eb0c3482ce7a32ac
+checksum: sha1:51e4d38512088eb963df11d772967f1533c8d49c
 
 source: proprietary
 maintainer: PlakarKorp
