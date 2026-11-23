@@ -1,7 +1,7 @@
 name: msad
-version: msad/v1.1.2
+version: msad/v1.1.3
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:965a6904334ce1500febcde8500a56eba50b76b6
+checksum: sha1:160ca9c8e8c90c8d1aafb60018cd42383a518a90
 
 source: proprietary
 maintainer: PlakarKorp
