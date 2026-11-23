@@ -1,7 +1,7 @@
 name: fs
 version: fs/v1.1.11
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:55daa1c47d5a21f2b0e7e34846add6a2fe4f9dc7
+checksum: sha1:e355effd49b4d47ae30355144496dd3c7dabc605
 
 source: open
 maintainer: PlakarKorp
