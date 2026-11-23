@@ -1,7 +1,7 @@
 name: rclone
-version: rclone/v1.1.3
+version: rclone/v1.1.4
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:1e9bd57ee90561cbe188feaebbc20592514862e6
+checksum: sha1:d96e6075055a6e2c25b8fe7a4e1b7e3886cfdc77
 
 source: open
 maintainer: PlakarKorp
