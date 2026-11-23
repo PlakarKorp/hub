@@ -1,7 +1,7 @@
 name: etcd
-version: etcd/v1.1.1
+version: etcd/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:a79121c181f20d1fcca6577227e29d1949e561f1
+checksum: sha1:d71d1deac60710b49d97e1a5206306be34fa1c9b
 
 source: open
 maintainer: PlakarKorp
