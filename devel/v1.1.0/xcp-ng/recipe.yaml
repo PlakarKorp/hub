@@ -1,7 +1,7 @@
 name: xcp-ng
-version: xcp-ng/v1.1.0-alpha.1
+version: xcp-ng/v1.1.0-alpha.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:17d2e65c047971837abf62e5985cf50cb237f97a
+checksum: sha1:57a4bdcdacdfea347592bc877002d8776f9eed6e
 
 source: open
 maintainer: PlakarKorp
