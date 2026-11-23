@@ -1,7 +1,7 @@
 name: webdav
-version: webdav/v1.1.0-alpha.4
+version: webdav/v1.1.0-alpha.5
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:c7b26a9e55a682f59a83e9428c50ef993e9a69f6
+checksum: sha1:1e46a2ecd75ac765b067990c3b9c335c39929474
 
 source: open
 maintainer: PlakarKorp
