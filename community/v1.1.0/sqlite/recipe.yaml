@@ -1,7 +1,7 @@
 name: sqlite
-version: sqlite/v1.1.0
+version: sqlite/v1.1.2
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:f218726b34d2853f0e8c13322607c3e22d18f0ca
+checksum: sha1:bd25e69e8fad1c21ea684b5bcc506c79ee86f6a4
 
 source: open
 maintainer: PlakarKorp
