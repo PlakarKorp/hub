@@ -1,7 +1,7 @@
 name: scaleway
-version: scaleway/v1.1.13
+version: scaleway/v1.1.14
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:16ede830c9d75ee6c6ec77c682d4cf8a74d127f8
+checksum: sha1:8f5ef08a7519fedea67f22e31defa2064c39db93
 
 source: proprietary
 maintainer: PlakarKorp
