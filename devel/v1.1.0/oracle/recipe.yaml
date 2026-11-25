@@ -1,7 +1,7 @@
 name: oracle
-version: oracle/v1.1.1-beta.1
+version: oracle/v1.1.2-beta.1
 repository: https://github.com/PlakarKorp/integrations-private
-checksum: sha1:121a07558b8fe80368cc3be7fa203fb981f2af82
+checksum: sha1:4c8ec39b867f5d4577c6fcd85be7946f6406075d
 
 source: proprietary
 maintainer: PlakarKorp
