@@ -1,7 +1,7 @@
 name: openstack
-version: openstack/v1.1.6
+version: openstack/v1.1.7
 repository: https://github.com/PlakarKorp/integrations
-checksum: sha1:b0477253c2095ccaef4ba62c0ba2c9f5b554125d
+checksum: sha1:f03fdaff8ca3c994401b7eb0128b2a8a0ddfd9ff
 
 source: open
 maintainer: PlakarKorp
